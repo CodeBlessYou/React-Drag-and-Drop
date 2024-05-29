@@ -13,6 +13,8 @@ const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
   const [activeCard, setActiveCard] = useState(null);
 
+  console.log(tasks);
+
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
